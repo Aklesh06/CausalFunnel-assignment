@@ -3,19 +3,41 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #F5EFFF;
+  --semibackground: #E5D9F2;
+  --semiforeground: #CDC1FF;
+  --foreground: #A294F9;
 }
 
 body {
+  background-color: var(--background);
   color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.radio-button {
+  width: 20px; 
+  height: 20px; 
+  border-radius: 50%;  
+  border: 2px solid #ccc;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.radio-button:checked {
+  background-color: #4CAF50; 
+  border-color: #4CAF50;
+  position: relative;
+}
+
+.radio-button:checked::before {
+  content: '';
+  position: absolute;
+  top: 4px;  
+  left: 4px; 
+  width: 8px;
+  height: 8px; 
+  border-radius: 50%; 
+  background-color: white;
 }

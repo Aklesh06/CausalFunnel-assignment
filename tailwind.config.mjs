@@ -9,7 +9,9 @@ export default {
     extend: {
       colors: {
         background: "var(--background)",
+        semibackground: "var(--semibackground)",
         foreground: "var(--foreground)",
+        semiforeground: "var(--semiforeground)",
       },
     },
   },
